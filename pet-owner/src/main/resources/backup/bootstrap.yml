@@ -1,0 +1,12 @@
+micronaut:
+  application:
+    name: pet-owner
+consul:
+  client:
+    config:
+      enabled: true
+      format: yaml
+      path: 'config/pet-owner'
+    default-zone: '${CONSUL_HOST:localhost}:${CONSUL_PORT:8500}'
+    registration:
+      enabled: true
